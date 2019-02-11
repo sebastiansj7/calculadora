@@ -11,6 +11,9 @@ public class Calculadora2019_1 {
 
     public Calculadora2019_1() {
         ans = 0;
+        this.n=0;
+        this.x=0;
+        this.y=0;
     }
 
     public static int suma(int a, int b) {
@@ -46,14 +49,14 @@ public class Calculadora2019_1 {
     }
 
     public static int potencia(int a, int b) {
-        ans=(int)Math.pow(a, b);
+        ans = (int) Math.pow(a, b);
         return ans;
     }
 
     public static int dividir(int a, int b) {
         while (b == 0) {
             System.out.println("no se puede dividir por cero, ingrese un valor mayor a cero");
-            b=s.nextInt();
+            b = s.nextInt();
         }
         ans = a / b;
         return ans;
@@ -66,24 +69,22 @@ public class Calculadora2019_1 {
 
         }
     }
-    
+
     static Scanner s = new Scanner(System.in);
+
     public static void main(String arg[]) {
 
-        
-        n = 0;
-        System.out.println("--------MENU---------");
-        System.out.println("1. ingrese 1 para sumar ");
-        System.out.println("2. ingrese 2 para restar");
-        System.out.println("3. ingresa 3 para multiplicar");
-        System.out.println("4. ingrese 4 para dividir");
-        System.out.println("5  ingrese 5 para hacer una potencia");
-        System.out.println("6. ingrese 6 adicionar al ans");
-        System.out.println("7. ingrese 7 para sustraer al ans");
-        System.out.println("por favor ingrese una opcion");
-        n = s.nextInt();
-
         do {
+            System.out.println("--------MENU---------");
+            System.out.println("1. ingrese 1 para sumar ");
+            System.out.println("2. ingrese 2 para restar");
+            System.out.println("3. ingresa 3 para multiplicar");
+            System.out.println("4. ingrese 4 para dividir");
+            System.out.println("5  ingrese 5 para hacer una potencia");
+            System.out.println("6. ingrese 6 adicionar al ans");
+            System.out.println("7. ingrese 7 para sustraer al ans");
+            System.out.println("por favor ingrese una opcion");
+            n = s.nextInt();
             switch (n) {
                 case 1:
                     System.out.println("ingrese primer numero");
@@ -140,19 +141,7 @@ public class Calculadora2019_1 {
                 default:
                     System.out.println("la opcion ingresada no es correcta");
             }
-            System.out.println("--------MENU---------");
-            System.out.println("1. ingrese 1 para sumar ");
-            System.out.println("2. ingrese 2 para restar");
-            System.out.println("3. ingresa 3 para multiplicar");
-            System.out.println("4. ingrese 4 para dividir");
-            System.out.println("5  ingrese 5 para hacer una potencia");
-            System.out.println("6. ingrese 6 adicionar al ans");
-            System.out.println("7. ingrese 7 para sustraer al ans");
-            System.out.println("por favor ingrese una opcion");
-            n = s.nextInt();
-
         } while (n != 0);
-
     }
 
 }
